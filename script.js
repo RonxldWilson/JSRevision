@@ -175,4 +175,12 @@ const fun1 = (params)=>{
 const rectangle = (a,b)=>{
     return a*b;
 }
-console.log(rectangle(7,8));
+console.log(rectangle(7,8)); 
+
+const rectangle1 = (a,b)=> a*b; // Another way of using arrow function
+//If there is one parameter in the function, then you can skip the paranthesis
+
+const square = num => num*num;
+
+//Every function returns Undefined untill specified otherwise
+//Arrow functions do not have a this keyword associated with it
