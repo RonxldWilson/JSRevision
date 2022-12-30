@@ -10,8 +10,13 @@ Operations on Variables
 */
 
 var names = "Hello, Variable";
-let variable = "Hello Let Keyoword";  // This has some constraints with regards to Scoping
-//Let is the prefeered way of creating variable
+let variable = "Hello Let Keyoword";  
+
+// This has some constraints with regards to Scoping
+//Let is the prefeered way of creating variable/
+//Let is Block scoped and Var is functioned scope
+// Just declaring a variable without a keyword create is a global variable
+
 const constant = 4;
 //Const is used to devlare variable that would never change it's value
 console.log(names);
@@ -47,7 +52,7 @@ console.log(Hello3);
 
 //Use Case of BackTicks
 const name2 = 'Ron';
-var Hello3 = `Hello, ${name2} `;
+var Hello3 = `Hello, ${name2} `; // This is also called as template literals
 const backticks = `${2+2}`;
 console.log(Hello3);
 console.log(backticks);
@@ -140,6 +145,8 @@ console.log(5===5);
 // }
 
 //Truthy/falsy Condition 
+//Falsy Values are: 0,'',undefined, null, NaN, false
+
 // While Loops 
 // while(conditioon){
 //     //Block of Code
@@ -180,7 +187,23 @@ console.log(rectangle(7,8));
 const rectangle1 = (a,b)=> a*b; // Another way of using arrow function
 //If there is one parameter in the function, then you can skip the paranthesis
 
-const square = num => num*num;
+// const square = num => num*num;
 
 //Every function returns Undefined untill specified otherwise
 //Arrow functions do not have a this keyword associated with it
+
+
+//Tyoe Conversion and Type Coercion 
+//Ex:
+const str = '10';
+const num = '10'; 
+console.log(Number(str));
+console.log(String(num));
+
+//Type Coercion is type conversion happening automatically  
+
+
+//Terenary Operator
+votingAge = 18
+
+votingAge>=18 ? console.log('You can Vote') : console.log(`you can't vote`);
