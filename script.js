@@ -203,7 +203,49 @@ console.log(String(num));
 //Type Coercion is type conversion happening automatically  
 
 
-//Terenary Operator
+//Terenary Operator Example
 votingAge = 18
-
 votingAge>=18 ? console.log('You can Vote') : console.log(`you can't vote`);
+
+// Condition ? if block : then block
+// Since this is an operator it will give a result this can be used to declare variables in an conditional manner
+// You can also use terneary operator inside of a template literal, unlike if statemenets
+
+console.log(`Your Eligible for Voting ${votingAge>=18? 'Yes':'No'} `);
+
+
+let bill = 275, tip = 0;
+tip = (bill>= 50 && bill<= 300) ? bill*0.15: bill*0.2;
+console.log(`The bill value is ${bill} and the tip is ${tip} and total is ${bill+tip}`)
+
+
+// JS is backwards compatible but not forward compatible
+// That means the code written in 2008 will work in todays borwser but it won't the other way round
+
+// To avoid issues like this we need to convert the Modern JS to used in the development stage to 
+// JS used in the production. This is called as Transpile and Polyfill. This can be acheived using tools like Babel
+
+
+//Strict Mode
+// This is added to the first line of a JS file to ensure that the code written is a clean code which is working really well
+//  This is done using -> 'usestrict';
+
+
+helloWorld = (Haha) => {
+    console.log("Hello World");
+}
+
+helloWorld();
+console.log(typeof helloWorld);
+
+//While using Const arrays can be modified as they are not primitive datatypes
+
+//ARRAYS
+
+const names = ['Ron','Wilson','K'];
+console.log(Names);
+
+console.log(Names[1]);
+//Another way to Declare a varaible
+
+const newNames = new Array('Ronald','Wilson');
