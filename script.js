@@ -242,10 +242,113 @@ console.log(typeof helloWorld);
 
 //ARRAYS
 
-const names = ['Ron','Wilson','K'];
-console.log(Names);
+const namesNew = ['Ron','Wilson','K'];
+console.log(namesNew);
 
-console.log(Names[1]);
+console.log(namesNew[1]);
 //Another way to Declare a varaible
 
 const newNames = new Array('Ronald','Wilson');
+
+//Methods / Array Operations
+
+//Adding Elements 
+console.log(newNames);
+const lengthAuto = newNames.push('K'); // push sends the length of the array auto
+console.log(newNames);
+
+console.log(lengthAuto);
+newNames.unshift('NewName');
+console.log(newNames);
+
+//Removing Elements
+const poppedElement = newNames.pop();
+console.log(poppedElement);
+console.log(newNames);
+
+const poppedElementFromBegining = newNames.shift();
+console.log(poppedElementFromBegining);
+console.log(newNames);
+
+// Position of an element
+
+console.log(newNames.indexOf('Ronald')); // this returns -1 as a number
+console.log(newNames.indexOf('Bob'));
+
+console.log(newNames.includes('Ronald')); // include functions returns a Boolean
+console.log(newNames.includes('Bob'));
+
+//This will be useful in writting if statements
+
+// Objects in JS
+
+const ronald = {
+    firstName : 'Ronald',
+    lastName : 'Wilson',
+    age: 21
+}
+console.log(ronald.firstName);
+console.log(ronald.lastName);
+
+
+// Dot abd Bracket Notation for objects
+
+console.log(ronald);
+console.log(ronald.lastName);
+console.log(ronald['lastName']);
+
+const nameKey = 'Name';
+console.log(ronald['lastName'+nameKey]);
+
+
+// Onject Methods
+
+const newRon = {
+    firstName: 'Ronald',
+    lastName: 'Wilson',
+    birthYear: 2000,
+    // calcAge: function(birthYear){
+    //     return 2023 - birthYear;
+    // }
+    calcAge: function(){
+        return this.birthYear;
+    }
+} 
+console.log(newRon.calcAge());
+
+// for loops
+
+for(let i = 1;i<=10;i++){
+    console.log(i);
+}
+
+// Looping on arrays
+
+const years = [2000, 2021, 1890];
+const ageCal = [];
+
+for(let i = 0;i < years.length;i++){
+    ageCal.push(2023-years[i]);
+}
+console.log(ageCal);
+
+// Continue and Break
+// Continue exits the current iteration
+// Break stops the entire iteration
+for(let i = 0;i < years.length;i++){
+    ageCal.push(2023-years[i]);
+    console.log(ageCal[i]);
+    continue;
+    console.log('Hello World');
+}
+
+
+for(let i = 0;i < years.length;i++){
+    ageCal.push(2023-years[i]);
+    console.log(ageCal[i]);
+    break;
+    console.log('Hello World');
+}
+
+// using while is useful when we are unsure how many iterations we will need ot run
+
